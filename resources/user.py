@@ -17,7 +17,6 @@ class UserRegister(Resource):
 
     def post(self):
         data = UserRegister.parser.parse_args()
-        import pdb; pdb.set_trace()
 
         if UserModel.find_by_username(data['username']):
             return {"message": "User already exists with that name."}, 400
