@@ -24,5 +24,4 @@ api.add_resource(UserRegister, '/register')
 # prevents app from running when its being import in another file,
 # only runs once when starting the app
 if __name__ == '__main__':
-    db.init_app(app)
     app.run(port=5000)
